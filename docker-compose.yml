@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  dev:
+    container_name: dev
+    hostname: dev
+    image: langdonglei/dev:latest
+    network_mode: bridge
+    ports:
+      - "8000:8000"
+      - "8010:8010"
+      - "8020:8020"
+      - "8030:8030"
+      - "8040:8040"
+      - "8050:8050"
+      - "8060:8060"
+      - "8070:8070"
+      - "8080:8080"
+      - "8090:8090"
+      - "3306:3306"
+      - "5432:5432"
+      - "6379:6379"
+    volumes: 
+      - ./www/:/root/www
+      - ./vhosts:/etc/nginx/conf.d
+    privileged: true
+    entrypoint: /sbin/init
