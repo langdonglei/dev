@@ -1,4 +1,4 @@
-cat > /etc/yum.repos.d/nginx.repo << EOF
+cat > /etc/yum.repos.d/nginx.repo << 'EOF'
 [nginx-stable]
 name=nginx stable repo
 baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
@@ -8,4 +8,8 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 module_hotfixes=true
 EOF
 
-dnf install nginx
+dnf install -y nginx
+
+sed -i 's|user  nginx|user  root|' /etc/nginx/nginx.conf
+
+systemctl enable nginx 
