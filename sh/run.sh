@@ -1,1 +1,1 @@
-echo 333;
+sh /root/install_nginx.sh
