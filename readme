@@ -42,3 +42,8 @@
 # show grants for 'xxh'@'%';
 # GRANT ALL PRIVILEGES ON *.* TO 'xxh'@'%'；
 # GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER ON *.* TO 'xxh'@'%';
+
+user.email=langdonglei@icloud.com
+user.name=langdonglei
+core.autocrlf=false
+core.filemode=false
