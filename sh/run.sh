@@ -1,7 +1,7 @@
-sh /root/install_tool.sh
-sh /root/install_nginx.sh
-sh /root/install_php.sh
-sh /root/install_vue.sh
-sh /root/install_mysql.sh
-sh /root/install_redis.sh
-sh /root/install_postgresql.sh
+sh /sh/install_tool.sh
+sh /sh/install_nginx.sh
+sh /sh/install_php.sh
+sh /sh/install_vue.sh
+sh /sh/install_mysql.sh
+sh /sh/install_redis.sh
+sh /sh/install_postgresql.sh
