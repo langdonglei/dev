@@ -20,7 +20,7 @@ services:
       - "5432:5432"
       - "6379:6379"
     volumes: 
-      - ./www/:/root/www
-      - ./vhosts:/etc/nginx/conf.d
+      - ../www/:/root/www
+      - ./vhost:/etc/nginx/conf.d
     privileged: true
     entrypoint: /sbin/init
