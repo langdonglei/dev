@@ -33,9 +33,8 @@ dnf install -y \
 cat >> /etc/opt/remi/php73/php.d/15-xdebug.ini << EOF
 xdebug.mode = debug
 xdebug.client_host = 192.168.1.222
-EOF 
+EOF
 
-
-curl -L https://github.com/composer/composer/releases/download/1.10.19/composer.phar -o /usr/local/bin/composer
+curl -L https://github.com/composer/composer/releases/download/2.1.3/composer.phar -o /usr/local/bin/composer
 chmod a+x /usr/local/bin/composer
 composer config -g repo.packagist composer https://mirrors.aliyun.com/composer
