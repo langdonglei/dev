@@ -22,5 +22,8 @@ services:
     volumes: 
       - ../:/root/www
       - ./vhost:/etc/nginx/conf.d
+      - ./db/redis:/var/lib/redis
+      - ./db/mysql:/var/lib/mysql
+      - ./db/pgsql:/var/lib/pgsql
     privileged: true
     entrypoint: /sbin/init
