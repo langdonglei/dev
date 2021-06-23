@@ -1,7 +1,9 @@
 dnf install -y https://rpms.remirepo.net/enterprise/remi-release-8.rpm
 
 
-dnf install -y php73-php-fpm \
+dnf install -y \
+    php73-php-cli \
+    php73-php-fpm \
     php73-php-xml \
     php73-php-mbstring \
     php73-php-pgsql \
@@ -13,10 +15,10 @@ dnf install -y php73-php-fpm \
     php73-php-process \
     php73-php-pecl-xdebug3-3.0.3-1.el8.remi.x86_64
 cat >> /etc/opt/remi/php73/php.ini << EOF
-error_reporting = E_ALL
-display_errors = 1
-date.timezone = PRC
-zend.assertions = 1
+error_reporting=E_ALL
+display_errors=1
+date.timezone=PRC
+zend.assertions=1
 EOF
 cat >> /etc/opt/remi/php73/php-fpm.d/www.conf << EOF
 listen=127.0.0.1:9000
@@ -28,7 +30,9 @@ EOF
 sed -i 's|apache|root|g' /etc/opt/remi/php73/php-fpm.d/www.conf
 sed -i 's|nodaemonize|nodaemonize -R|' /lib/systemd/system/php73-php-fpm.service
 
-dnf install -y php80-php-fpm \
+dnf install -y \
+    php80-php-cli \
+    php80-php-fpm \
     php80-php-xml \
     php80-php-mbstring \
     php80-php-pgsql \
@@ -40,10 +44,10 @@ dnf install -y php80-php-fpm \
     php80-php-process \
     php80-php-pecl-xdebug3-3.0.3-1.el8.remi.x86_64
 cat >> /etc/opt/remi/php80/php.ini << EOF
-error_reporting = E_ALL
-display_errors = 1
-date.timezone = PRC
-zend.assertions = 1
+error_reporting=E_ALL
+display_errors=1
+date.timezone=PRC
+zend.assertions=1
 EOF
 cat >> /etc/opt/remi/php80/php-fpm.d/www.conf << EOF
 listen=127.0.0.1:9000
