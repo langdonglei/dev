@@ -3,7 +3,7 @@ services:
   dev:
     container_name: dev
     hostname: dev
-    image: langdonglei/dev:latest
+    image: registry.cn-hangzhou.aliyuncs.com/langdonglei/dev:latest
     network_mode: bridge
     ports:
       - "8000:8000"
