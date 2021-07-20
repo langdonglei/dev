@@ -6,6 +6,7 @@ dnf install -y \
     git \
     gcc \
     gcc-c++ \
+    sshpass \
     wget
 rm -f /root/anaconda-ks.cfg
 rm -f /root/anaconda-post.log
