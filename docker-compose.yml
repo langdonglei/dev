@@ -18,3 +18,4 @@ services:
       - ./db/pgsql:/var/lib/pgsql
     privileged: true
     entrypoint: /sbin/init
+
