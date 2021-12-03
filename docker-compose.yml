@@ -7,15 +7,11 @@ services:
     network_mode: bridge
     ports:
       - "80:80"
-      - "3306:3306"
-      - "5432:5432"
       - "6379:6379"
     volumes: 
       - ../:/root/www
       - ./vhost:/etc/nginx/conf.d
       - ./db/redis:/var/lib/redis
-      - ./db/mysql:/var/lib/mysql
-      - ./db/pgsql:/var/lib/pgsql
     privileged: true
     entrypoint: /sbin/init
 
