@@ -10,7 +10,7 @@ dnf install -y \
     php80-php-gd \
     php80-php-swoole \
     php80-php-process \
-    php80-php-pecl-xdebug3-3.0.3-1.el8.remi.x86_64
+    php80-php-pecl-xdebug3
 
 cat >> /etc/opt/remi/php80/php.ini << EOF
 error_reporting=E_ALL
