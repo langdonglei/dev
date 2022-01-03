@@ -1,4 +1,4 @@
-dnf install -y https://rpms.remirepo.net/enterprise/remi-release-8.rpm
+
 
 # php73
 dnf install -y \
