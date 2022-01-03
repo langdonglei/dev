@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [ master ]
 jobs:
-  j1:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: s1 -> Check Out Repo
