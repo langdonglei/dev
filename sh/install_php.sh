@@ -1,5 +1,3 @@
-
-
 # php73
 dnf install -y \
     php73-php-cli \
@@ -56,11 +54,3 @@ sed -i 's|apache|root|g' /etc/opt/remi/php80/php-fpm.d/www.conf
 sed -i 's|nodaemonize|nodaemonize -R|' /lib/systemd/system/php80-php-fpm.service
 systemctl enable php80-php-fpm
 
-# composer
-curl -L https://github.com/composer/composer/releases/download/2.1.3/composer.phar -o /usr/local/bin/composer
-chmod a+x /usr/local/bin/composer
-composer config -g repo.packagist composer https://mirrors.aliyun.com/composer
-
-# default cli php
-#ln -s /usr/bin/php73 /usr/local/bin/php
-ln -s /usr/bin/php80 /usr/local/bin/php
