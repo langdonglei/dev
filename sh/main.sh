@@ -6,3 +6,5 @@ sh /sh/install_nginx.sh
 sh /sh/install_php80.sh
 
 sh /sh/install_composer.sh
+
+sh /sh/install_nodejs12.sh
