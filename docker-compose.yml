@@ -7,6 +7,7 @@ services:
     network_mode: bridge
     ports:
       - "80:80"
+      - "3333:3333"
     volumes: 
       - ../:/root/www
       - ./vhost:/etc/nginx/conf.d
