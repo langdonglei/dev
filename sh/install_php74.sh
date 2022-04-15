@@ -1,4 +1,4 @@
-dnf install -y \
+yum install -y \
     php74-php-cli \
     php74-php-fpm \
     php74-php-xml \
