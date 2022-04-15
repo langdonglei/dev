@@ -8,7 +8,7 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 module_hotfixes=true
 EOF
 
-dnf install -y nginx
+yum install -y nginx
 
 sed -i 's|user  nginx|user  root|' /etc/nginx/nginx.conf
 

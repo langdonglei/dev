@@ -28,3 +28,4 @@ sed -i 's|apache|root|g' /etc/opt/remi/php73/php-fpm.d/www.conf
 sed -i 's|nodaemonize|nodaemonize -R|' /lib/systemd/system/php73-php-fpm.service
 
 systemctl enable php73-php-fpm
+ln -s /usr/bin/php73 /usr/local/bin/php
