@@ -28,3 +28,4 @@ sed -i 's|apache|root|g' /etc/opt/remi/php80/php-fpm.d/www.conf
 sed -i 's|nodaemonize|nodaemonize -R|' /lib/systemd/system/php80-php-fpm.service
 
 systemctl enable php80-php-fpm
+ln -s /usr/bin/php80 /usr/local/bin/php
