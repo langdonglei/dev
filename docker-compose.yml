@@ -1,9 +1,10 @@
 version: "3.8"
 services:
-  dev:
-    container_name: dev
+  php:
+    container_name: php
     hostname: dev
     image: langdonglei/dev:latest
+    restart: always
     network_mode: bridge
     ports:
       - "80:80" 
@@ -14,4 +15,14 @@ services:
       - ./vhost:/etc/nginx/conf.d
     privileged: true
     entrypoint: /sbin/init
-
+  mysql:
+    container_name: mysql
+    hostname: mysql
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    network_mode: bridge
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306" 

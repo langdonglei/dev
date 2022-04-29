@@ -10,7 +10,7 @@ yum install -y \
     php74-php-gd \
     php74-php-swoole \
     php74-php-process \
-    php74-php-pecl-xdebug3-3.0.3-1.el8.remi.x86_64
+    php74-php-pecl-xdebug3
 
 cat >> /etc/opt/remi/php74/php.ini << EOF
 error_reporting=E_ALL
@@ -21,7 +21,7 @@ EOF
 
 cat >> /etc/opt/remi/php74/php.d/15-xdebug.ini << EOF
 xdebug.mode=debug
-xdebug.client_host=192.168.1.222
+xdebug.client_host=192.168.1.176
 EOF
 
 sed -i 's|apache|root|g' /etc/opt/remi/php74/php-fpm.d/www.conf
