@@ -9,7 +9,6 @@ services:
     ports:
       - "80:80" 
       - "3333:3333"
-      - "6379:6379"
     volumes: 
       - ../:/root/www
       - ./vhost:/etc/nginx/conf.d
