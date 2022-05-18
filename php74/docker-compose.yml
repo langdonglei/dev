@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  php:
+    container_name: php74
+    hostname: php74
+    image: langdonglei/php74:latest
+    network_mode: bridge
+    ports:
+      - "80:80" 
+      - "3333:3333"
+      - "6379:6379"
+    volumes: 
+      - ../../:/root/www
+      - ../vhost:/etc/nginx/conf.d
+    command: ["sh","-c","nginx && /opt/remi/php74/root/sbin/php-fpm -FR"]
+    restart: always
+    privileged: true

@@ -1,3 +1,5 @@
+yum install -y https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+
 yum install -y \
     php74-php-cli \
     php74-php-fpm \
@@ -29,7 +31,4 @@ sed -i 's|nodaemonize|nodaemonize -R|' /lib/systemd/system/php74-php-fpm.service
 
 systemctl enable php74-php-fpm
 
-# default cli php
 ln -s /usr/bin/php74 /usr/local/bin/php
-
-# composer
