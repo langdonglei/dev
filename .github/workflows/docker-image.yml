@@ -22,7 +22,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./php74
-          file: ./Dockerfile
+          file: ./php74/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/php74:latest
       - name: s5 -> Image digest
