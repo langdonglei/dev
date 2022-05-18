@@ -12,6 +12,7 @@ services:
     volumes: 
       - ../../:/root/www
       - ../vhost:/etc/nginx/conf.d
-    command: ["sh","-c","nginx && fpm -R && redis /etc/redis.conf"]
     restart: always
     privileged: true
+    entrypoint: /sbin/init
+    command: ["sh","-c","nginx && fpm -R && redis /etc/redis.conf"]
