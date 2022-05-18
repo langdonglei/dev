@@ -32,3 +32,4 @@ sed -i 's|nodaemonize|nodaemonize -R|' /lib/systemd/system/php74-php-fpm.service
 systemctl enable php74-php-fpm
 
 ln -s /usr/bin/php74 /usr/local/bin/php
+ln -s /opt/remi/php74/root/sbin/php-fpm /usr/loca/bin/fpm

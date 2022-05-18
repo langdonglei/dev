@@ -12,6 +12,6 @@ services:
     volumes: 
       - ../../:/root/www
       - ../vhost:/etc/nginx/conf.d
-    command: ["sh","-c","nginx && /opt/remi/php74/root/sbin/php-fpm -FR"]
+    command: ["sh","-c","nginx && fpm -R && redis /etc/redis.conf"]
     restart: always
     privileged: true
