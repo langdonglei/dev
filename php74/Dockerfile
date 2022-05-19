@@ -1,4 +1,4 @@
-FROM langdonglei/centos79
+FROM centos:7
 COPY . /install
 RUN sh /install/install.sh
-ENTRYPOINT ["/usr/sbin/init"]
+ENTRYPOINT ["nginx && fpm -R && redis-server /etc/redis.conf"]

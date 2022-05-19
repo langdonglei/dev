@@ -12,6 +12,3 @@ services:
     volumes: 
       - ../../:/root/www
       - ../vhost:/etc/nginx/conf.d
-    restart: always
-    privileged: true
-    command: ["sh","-c","nginx && fpm -R && redis /etc/redis.conf"]
