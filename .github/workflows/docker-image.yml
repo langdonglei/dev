@@ -21,9 +21,9 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-          context: ./php74
-          file: ./php74/Dockerfile
+          context: ./centos79
+          file: ./centos79/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/php74:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/centos79:latest
       - name: s5 -> Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
