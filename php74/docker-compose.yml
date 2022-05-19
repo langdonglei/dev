@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  php:
+  php74:
     container_name: php74
     hostname: php74
     image: langdonglei/php74:latest
