@@ -3,12 +3,13 @@ services:
   php74:
     container_name: php74
     hostname: php74
-    image: langdonglei/php74:latest
+    image: langdonglei/dev:latest
     network_mode: bridge
     ports:
       - "80:80" 
-
+      - "3333:3333"
       - "6379:6379"
     volumes: 
-      - ../../:/root/www
+      - ../../:/www
       - ../vhost:/etc/nginx/conf.d
+    command: ["sh","-c","nginx && /opt/remi/php74/root/sbin/php-fpm -FR"]
