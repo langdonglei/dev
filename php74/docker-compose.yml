@@ -3,7 +3,7 @@ services:
   php74:
     container_name: php74
     hostname: php74
-    image: langdonglei/dev:latest
+    image: langdonglei/php74:latest
     network_mode: bridge
     ports:
       - "80:80" 
