@@ -5,6 +5,7 @@ services:
     hostname: php74
     image: langdonglei/php74:latest
     network_mode: bridge
+    restart: always
     ports:
       - "80:80" 
       - "3333:3333"
@@ -13,4 +14,4 @@ services:
     volumes: 
       - ../../:/www
       - ../vhost:/etc/nginx/conf.d
-    restart: always 
+
