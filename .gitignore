@@ -1,5 +1,3 @@
 /.idea
 /.cloudbase
 /mysql80/data
-/vhost
-!/vhost/3333.conf
