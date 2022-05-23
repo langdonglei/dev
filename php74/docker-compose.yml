@@ -6,12 +6,11 @@ services:
     image: langdonglei/php74:latest
     network_mode: bridge
     restart: always
+    volumes: 
+      - ../../:/www
+      - ../vhost:/etc/nginx/conf.d
     ports:
       - "80:80" 
       - "3333:3333"
       - "5555:5555"
       - "6379:6379"
-    volumes: 
-      - ../../:/www
-      - ../vhost:/etc/nginx/conf.d
-
