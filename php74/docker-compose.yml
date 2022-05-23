@@ -13,4 +13,4 @@ services:
     volumes: 
       - ../../:/www
       - ../vhost:/etc/nginx/conf.d
-    restart: alwarys
+    restart: always 
