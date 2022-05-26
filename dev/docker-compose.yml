@@ -1,9 +1,9 @@
 version: "3.8"
 services:
-  php:
-    container_name: php
-    hostname: php
-    image: langdonglei/php:latest
+  dev:
+    container_name: dev
+    hostname: dev
+    image: langdonglei/dev:latest
     network_mode: bridge
     restart: always
     volumes: 
