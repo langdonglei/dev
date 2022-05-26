@@ -14,4 +14,4 @@ services:
       - "3333:3333"
       - "5555:5555"
       - "6379:6379"
-    ENTRYPOINT: ["sh","-c","nginx && redis-server /etc/redis.conf"]
+    command: ["sh","-c","nginx && redis-server /etc/redis.conf"]
