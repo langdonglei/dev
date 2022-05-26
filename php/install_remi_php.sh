@@ -30,6 +30,8 @@ EOF
 
     sed -i 's|apache|root|g' /etc/opt/remi/php${i}/php-fpm.d/www.conf
     sed -i "s|listen = 127.0.0.1:9000|listen = /run/php${i}-fpm.sock|g" /etc/opt/remi/php${i}/php-fpm.d/www.conf
+
+    ln -s /opt/remi/php${i}/root/sbin/php-fpm /usr/local/bin/php${i}-fpm
 done
 
 ln -s /usr/bin/php73 /usr/local/bin/php
