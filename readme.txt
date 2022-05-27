@@ -29,14 +29,19 @@
 # GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER ON *.* TO 'xxh'@'%';
 
 
-xdebug
-只要服务端配置开启 enabel=1|mode=debug
+xdebug使用笔记
+
+PHPSTORM IDE
+配置好带有xdebug的解释器 本机解释器 不用映射目录   远程解释器需要手动映射目录  docker会自动映射目录
+点开监听小按钮
+
+xdebug配置文件
+开启 enabel=1|mode=debug
 并
 discover_client_host=true 来着不拒模式(本机 vs 实体机|虚拟机)  或者 指定了client_client=xxx(本机 vs 实体机|虚拟机) (docker容器必须client_client=host.docker.internal)
 这两个条件满足的情况下 只要请求cookies或GET里带着 XDEUBG_SEESION 不管值是啥 都能激活
 
 
-还需要配置好带有xdebug的解释器 本机解释器 不用映射目录   远程解释器需要手动映射目录  docker会自动映射目录
 
 
 
