@@ -25,7 +25,7 @@ EOF
 
     cat >> /etc/opt/remi/php${i}/php.d/15-xdebug.ini << EOF
     xdebug.mode=debug
-    xdebug.discover_client_host=true
+    xdebug.client_host=host.docker.internal
 EOF
 
     sed -i 's|apache|root|g' /etc/opt/remi/php${i}/php-fpm.d/www.conf
