@@ -1,12 +1,4 @@
-[mysqld]
-skip-host-cache
-skip-name-resolve
-#bind-address=0.0.0.0
-#max_connect_errors=10
-#character-set-server=utf8
-#default-storage-engine=INNODB
-#default_authentication_plugin=mysql_native_password
-[mysql]
+
 mysql -uroot --execute "update mysql.user set host = '%' where user = 'root';"
 mysql -uroot --execute "alter user root identified with mysql_native_password by 'root';"
 mysql -uroot --execute "flush privileges;"
