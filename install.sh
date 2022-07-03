@@ -5,9 +5,14 @@ yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarc
 yum install -y git net-tools unzip zip vim gcc gcc-c++ sshpass wget p7zip psmisc
 
 sh /install/install_epel_redis3.sh
+
 sh /install/install_remi_php.sh
+
 sh /install/install_official_composer.sh
+
 sh /install/install_official_nginx.sh
-sh /install/install_nvm_node.sh
+
+sh /install/install_nvm.sh
+sh /install/install_nvm_after.sh
 
 yum clean all
