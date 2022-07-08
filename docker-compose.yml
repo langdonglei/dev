@@ -1,19 +1,16 @@
 version: "3.8"
 services:
   dev:
-    container_name: dev
-    hostname: dev
     image: langdonglei/dev:latest
     network_mode: bridge
+    hostname: dev
     restart: always
-    volumes: 
-      - ../../:/www
-      - ../vhost:/etc/nginx/conf.d
+    volumes:
+      - ./:/www
     ports:
-      - "80:80" 
+      - "80:80"
       - "3333:3333"
       - "3001:3001"
       - "3002:3002"
       - "3003:3003"
       - "6379:6379"
-    command: ["sh","-c","nginx && php72-fpm -R && php73-fpm -R && php74-fpm -R && php80-fpm -R && redis-server /etc/redis.conf"]
