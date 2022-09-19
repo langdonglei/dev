@@ -2,9 +2,10 @@ version: "3.8"
 services:
   dev:
     image: langdonglei/dev:latest
+    restart: always
     network_mode: bridge
     hostname: dev
-    restart: always
+    container_name: dev
     volumes:
       - ./:/www
     ports:
