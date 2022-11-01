@@ -13,7 +13,6 @@ sh /install_official_composer.sh
 sh /install_official_nginx.sh
 
 sh /install_nvm.sh
-sh /install_nvm_after.sh
 
 cp /default.conf /etc/nginx/conf.d/default.conf
 
