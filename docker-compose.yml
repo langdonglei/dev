@@ -4,12 +4,13 @@ services:
     restart: always
     image: langdonglei/dev
     volumes:
-      - './:/www'
+      - '../:/www'
+      - './:/etc/nginx/conf.d'
     ports:
       - '80:80'
       - '6379:6379'
       - '55551:55551'
       - '55552:55552'
       - '55553:55554'
-      - '55554:55555'
+      - '55554:55554'
       - '55555:55555'
