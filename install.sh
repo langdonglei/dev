@@ -12,8 +12,4 @@ sh /install_official_composer.sh
 
 sh /install_official_nginx.sh
 
-cp /default.conf /etc/nginx/conf.d/default.conf
-
-sed -i 's|root /www|root /www/public|'
-
 yum clean all

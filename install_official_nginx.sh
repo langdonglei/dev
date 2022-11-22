@@ -11,4 +11,6 @@ EOF
 yum install -y nginx
 
 sed -i 's|user  nginx|user  root|' /etc/nginx/nginx.conf
+cp /default.conf /etc/nginx/conf.d/default.conf
+sed -i 's|root /www|root /www/public|' /etc/nginx/conf.d/default.conf
 
