@@ -12,4 +12,3 @@ yum install -y nginx
 
 sed -i 's|user  nginx|user  root|' /etc/nginx/nginx.conf
 
-systemctl enable nginx 
