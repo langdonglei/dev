@@ -10,7 +10,7 @@ xdebug.client_host = host.docker.internal // 三选一 环境部署在docker
 
 ## 被动触发
 ### request
-#### 无需设置interpreter 无需设置deployment 无需设置server(当监听捕获到xdeubg请求时会自动创建server--nginx必须设置server_name否则phpstorm无法处理)
+#### 什么都不用设置 无需设置interpreter 无需设置deployment 无需设置server(当监听捕获到xdeubg请求时会自动创建server--nginx必须设置server_name否则phpstorm无法处理 所以失如果失效的时候 最好先检查是否有之前手动设置过的同名server_name 删除之)
 #### 只需打开监听,然后从任意客户端传递一个调试信号:比如?XDEBUG_SESSION_START等
 
 ## 主动触发
