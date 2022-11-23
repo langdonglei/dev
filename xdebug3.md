@@ -16,4 +16,9 @@ xdebug.client_client = host.docker.internal // 三选一 环境部署在docker
 #### 配置运行项 选好启动脚本 一定要选择默认解释器
 #### 配置默认解释器 本机解释器不用映射目录 远程解释器需要手动映射目录 docker会自动映射(自动映射与servers映射无关)
 
-## todo 监听触发
+## 监听触发
+### request
+```
+无需设置interpreter 无需设置deployment 无需设置server(当监听捕获到xdeubg请求时会自动创建server--nginx必须设置server_name否则phpstorm无法处理)
+只需打开监听,然后从任意客户端传递一个调试信号:比如?XDEBUG_SESSION_START等
+```
