@@ -12,4 +12,6 @@ sh /install_official_composer.sh
 
 sh /install_official_nginx.sh
 
+sh /install_openssh.sh
+
 yum clean all
