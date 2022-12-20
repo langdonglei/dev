@@ -6,7 +6,7 @@ services:
     restart: always
     image: langdonglei/dev
     volumes:
-      - 'C:\Users\asdf\www:/www'
+      - '../:/www'
       - './:/etc/nginx/conf.d'
     ports:
       - '22:22'
