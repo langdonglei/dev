@@ -21,3 +21,5 @@ xdebug.client_host = host.docker.internal // 三选一 环境部署在docker
 #### 不需要配置servers 只需要配置解释器
 #### 配置运行项 选好启动脚本 一定要选择默认解释器
 #### 配置默认解释器 本机解释器不用映射目录 远程解释器需要手动映射目录 docker会自动映射(自动映射与servers映射无关)
+
+
