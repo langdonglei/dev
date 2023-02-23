@@ -1,18 +1,10 @@
 version: '3.3'
 services:
   dev:
-    container_name: dev
-    hostname: dev
-    restart: always
     image: langdonglei/dev
     volumes:
-      - '../:/www'
-      - './:/etc/nginx/conf.d'
+      - '../fastadmin:/www'
     ports:
       - '22:22'
       - '80:80'
-      - '55551:55551'
-      - '55552:55552'
-      - '55553:55554'
-      - '55554:55554'
       - '55555:55555'
