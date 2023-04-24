@@ -1,5 +1,5 @@
 yum install -y https://rpms.remirepo.net/enterprise/remi-release-7.rpm
-arr=(72 73 74 80)
+arr=(72 73 74 80 81)
 for i in ${arr[@]}
 do
     yum install -y \
