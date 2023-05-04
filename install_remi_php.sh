@@ -14,6 +14,7 @@ do
         php${i}-php-gd \
         php${i}-php-swoole \
         php${i}-php-process \
+        php${i}-php-sodium \
         php${i}-php-pecl-xdebug3
     cat >> /etc/opt/remi/php${i}/php.ini << EOF
     error_reporting=E_ALL
