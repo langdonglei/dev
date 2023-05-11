@@ -1,4 +1,5 @@
 yum install -y https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 arr=(72 73 74 80 81)
 for i in ${arr[@]}
 do
@@ -15,6 +16,7 @@ do
         php${i}-php-swoole \
         php${i}-php-process \
         php${i}-php-sodium \
+        php${i}-php-sqlsrv \
         php${i}-php-pecl-xdebug3
     cat >> /etc/opt/remi/php${i}/php.ini << EOF
     error_reporting=E_ALL
