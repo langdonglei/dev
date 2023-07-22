@@ -1,6 +1,6 @@
 yum install -y https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
-arr=(72 73 74 80 81)
+arr=( 73 74 80 81 )
 for i in ${arr[@]}
 do
     yum install -y \
