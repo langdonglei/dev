@@ -46,3 +46,6 @@ access_log /var/log/nginx/access_$date.log main;
 
 # nginx body    
 client_max_body_size 100M;
+
+
+
