@@ -8,9 +8,9 @@ sh /install_epel_redis3.sh
 
 sh /install_remi_php.sh
 
-sh /install_official_composer.sh
+sh /install_composer.sh
 
-sh /install_official_nginx.sh
+sh /install_nginx.sh
 
 sh /install_nvm.sh
 
