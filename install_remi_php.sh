@@ -1,5 +1,4 @@
 yum install -y https://rpms.remirepo.net/enterprise/remi-release-7.rpm
-curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 arr=( 73 74 80 81 )
 for i in ${arr[@]}
 do
@@ -35,3 +34,6 @@ EOF
 done
 
 ln -s /usr/bin/php74 /usr/local/bin/php
+
+curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+ACCEPT_EULA=Y yum install -y msodbcsql17
