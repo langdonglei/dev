@@ -6,8 +6,6 @@ yum install -y git net-tools bind-utils unzip zip vim gcc gcc-c++ sshpass wget p
 
 sh /install_epel_redis3.sh
 
-sh /install_composer.sh
-
 sh /install_nginx.sh
 
 sh /install_nvm.sh
