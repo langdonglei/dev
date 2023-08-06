@@ -37,5 +37,4 @@ curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/m
 ACCEPT_EULA=Y yum install -y msodbcsql17
 
 ln -s /opt/remi/php74/root/usr/bin/php /usr/local/bin/php
-ln -s /opt/remi/php74/root/sbin/php-fpm /usr/local/bin/php-fpm
 
