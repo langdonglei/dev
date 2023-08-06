@@ -8,8 +8,6 @@ sh /install_epel_redis3.sh
 
 sh /install_nginx.sh
 
-sh /install_nvm.sh
-
 yum clean all
 
 
