@@ -1,1 +1,1 @@
-redis-server /etc/redis.conf && nginx && php74-fpm -R
+nginx && php74-fpm -R && redis-server /etc/redis.conf
