@@ -33,7 +33,9 @@ EOF
     ln -s /opt/remi/php${i}/root/sbin/php-fpm /usr/local/bin/php${i}-fpm
 done
 
-ln -s /usr/bin/php74 /usr/local/bin/php
-
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 ACCEPT_EULA=Y yum install -y msodbcsql17
+
+ln -s /usr/bin/php74 /usr/local/bin/php
+ln -s /usr/bin/php74-php-fpm /usr/local/bin/php-fpm
+
