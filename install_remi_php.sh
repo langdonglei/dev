@@ -36,6 +36,6 @@ done
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 ACCEPT_EULA=Y yum install -y msodbcsql17
 
-ln -s /usr/bin/php74 /usr/local/bin/php
-ln -s /usr/bin/php74-php-fpm /usr/local/bin/php-fpm
+ln -s /opt/remi/php74/root/usr/bin/php /usr/local/bin/php
+ln -s /opt/remi/php74/root/sbin/php-fpm /usr/local/bin/php-fpm
 
