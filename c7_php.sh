@@ -1,3 +1,5 @@
+curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+ACCEPT_EULA=Y yum install -y msodbcsql17
 yum install -y https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 arr=(74)
 for i in ${arr[@]}
@@ -31,9 +33,6 @@ EOF
     sed -i 's|apache|root|g'                                            /etc/opt/remi/php${i}/php-fpm.d/www.conf
     sed -i "s|listen = 127.0.0.1:9000|listen = /run/php${i}-fpm.sock|g" /etc/opt/remi/php${i}/php-fpm.d/www.conf
 done
-
-curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
-ACCEPT_EULA=Y yum install -y msodbcsql17
 
 ln -s /opt/remi/php74/root/usr/bin/php  /usr/local/bin/php
 ln -s /opt/remi/php74/root/sbin/php-fpm /usr/local/bin/php-fpm
