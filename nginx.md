@@ -5,6 +5,20 @@ rewrite_log on;
 default_type text/html;
 return 200 'default_server';
 
+# thinkphp
+location / {
+  if (!-e $request_filename){
+    rewrite ^(.*)$ /index.php?s=$1 last;
+    break;
+  }
+  if ($request_method = 'options') {
+    add_header access-control-allow-origin *;
+    add_header access-control-allow-methods *;
+    add_header access-control-allow-headers *;
+    return 200;
+  }
+}
+
 # nginx header
 location / {
   # always 只是指定了在所有状态码都要添加此头 但是 如果子模块（也包括if模块）中有新添加的header 则会被子模块丢弃 如果没有新添加 子模块则会继承
