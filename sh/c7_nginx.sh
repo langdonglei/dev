@@ -1,3 +1,4 @@
+set -ex
 cat > /etc/yum.repos.d/nginx.repo << 'EOF'
 [nginx-stable]
 name=nginx stable repo
@@ -10,7 +11,7 @@ EOF
 
 yum install -y nginx
 
-cp /default.conf                       /etc/nginx/conf.d/default.conf
+cp /conf/default.conf                  /etc/nginx/conf.d/default.conf
 sed -i 's|root /www|root /www/public|' /etc/nginx/conf.d/default.conf
 sed -i 's|user  nginx|user  root|'     /etc/nginx/nginx.conf
 

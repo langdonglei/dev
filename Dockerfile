@@ -1,10 +1,9 @@
 FROM centos:7
 COPY . /
-RUN sh /c7_base.sh
-RUN sh /c7_nginx.sh
-RUN sh /c7_redis.sh
-RUN sh /c7_php.sh
-RUN sh /composer.sh
-RUN sh /nvm.sh
+RUN sh /sh/c7_base.sh
+RUN sh /sh/c7_nginx.sh
+RUN sh /sh/c7_redis.sh
+RUN sh /sh/c7_php.sh
+RUN sh /sh/composer.sh
 ENTRYPOINT ["sh","/entrypoint.sh"]
 CMD ["74"]

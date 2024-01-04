@@ -1,3 +1,4 @@
+set -ex
 yum install -y openssh-server sshpass passwd
 /usr/bin/ssh-keygen -A
 echo root:root | chpasswd
