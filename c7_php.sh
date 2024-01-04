@@ -2,7 +2,7 @@ set -ex
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 ACCEPT_EULA=Y yum install -y msodbcsql17
 yum install -y https://rpms.remirepo.net/enterprise/remi-release-7.rpm
-arr=(74)
+arr=(74 80)
 for i in ${arr[@]}
 do
     yum install -y \
