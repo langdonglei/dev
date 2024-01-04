@@ -1,9 +1,9 @@
 nginx
 
 if test $1 == 80 ; then
-  php-fpm-80 -R
+  /opt/remi/php80/root/sbin/php-fpm -R
 else
-  php-fpm-74 -R
+  /opt/remi/php74/root/sbin/php-fpm -R
 fi
 
 redis-server /etc/redis.conf

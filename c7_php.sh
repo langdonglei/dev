@@ -36,5 +36,3 @@ EOF
 done
 
 ln -s /opt/remi/php74/root/usr/bin/php  /usr/local/bin/php
-ln -s /opt/remi/php74/root/sbin/php-fpm /usr/local/bin/php-fpm
-
